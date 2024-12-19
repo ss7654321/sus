@@ -1,6 +1,29 @@
 spring:
   application:
-    name: Sus # ???????????????????
+    name: Sus
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      jedis:
+        pool:
+          max-active: 10
+          max-wait: -1
+          max-idle: 10
+          min-idle: 5
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 3038046363@qq.com
+    password: kdxmsplylmirdfeg
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          ssl:
+            enable: false
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver # MySQL ???? JDBC ???
     url: jdbc:mysql://localhost:3306/db01 # ????? URL?`db01` ??????

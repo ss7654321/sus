@@ -11,6 +11,7 @@ public class Result {
     private Integer code;//状态相应码
     private String msg;//响应信息
     private Object data;//返回数据
+
     public static Result success() {
         return new Result(1, "success", null);
     }
@@ -21,3 +22,4 @@ public class Result {
         return new Result(0, msg, null);
     }
 }
+
